@@ -19,5 +19,8 @@
 }
 .form-floating > textarea.form-control {
   resize: none;
-  height: 220px;
+  height: 120px;
+  @include pad {
+    height: 220px;
+  }
 }
