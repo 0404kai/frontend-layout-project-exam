@@ -1,0 +1,23 @@
+.banner {
+  background-image: url('../images/hero-sm.png');
+  background-size: cover;
+  background-position: center center;
+  height: 480px;
+  @include pad {
+    background-image: url('../images/hero.png');
+    height: 600px;
+  }
+}
+.inspiration {
+  img {
+    width: 320px;
+    @include pad {
+      min-width: 0;
+      width: auto;
+    }
+  }
+}
+.form-floating > textarea.form-control {
+  resize: none;
+  height: 220px;
+}

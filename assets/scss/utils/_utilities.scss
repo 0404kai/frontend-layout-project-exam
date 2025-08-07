@@ -1,0 +1,53 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "opacity": (
+      property: opacity,
+      values: (
+        0: 0,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        80: 0.8,
+        100: 1,
+      ),
+    ),
+    "bg-opacity": (
+      responsive: true,
+      css-var: true,
+      class: bg-opacity,
+      values: (
+        10: 0.1,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        80: 0.8,
+        100: 1,
+      ),
+    ),
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        responsive: true
+      )
+    ),
+    "position": map-merge(
+      map-get($utilities, "position"),
+      (
+        responsive: true
+      )
+    ),
+    "translate-middle": map-merge(
+      map-get($utilities, "translate-middle"),
+      (
+        responsive: true
+      )
+    ),
+    "display": map-merge(
+      map-get($utilities, "display"),
+      (
+        "values": append(map-get(map-get($utilities, "display"), "values"), contents)
+      )
+    )
+  )
+);
