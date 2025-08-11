@@ -4,3 +4,13 @@
 .offcanvas-backdrop.show {
   opacity: 0.8;
 }
+.offcanvas-body {
+  a {
+    border-bottom: 1px solid transparent;
+    opacity: 1;
+    &:hover {
+      color: #235744;
+      border-bottom: 1px solid #235744;
+    }
+  }
+}
