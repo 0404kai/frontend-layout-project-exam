@@ -25,35 +25,53 @@ $utilities: map-merge(
         100: 1,
       ),
     ),
-    "background-color": map-merge(
-      map-get($utilities, "background-color"),
-      (
-        responsive: true
-      )
-    ),
-    "position": map-merge(
-      map-get($utilities, "position"),
-      (
-        responsive: true
-      )
-    ),
-    "translate-middle": map-merge(
-      map-get($utilities, "translate-middle"),
-      (
-        responsive: true
-      )
-    ),
-    "font-size": map-merge(
-      map-get($utilities, "font-size"),
-      (
-        responsive: true
-      )
-    ),
-    "display": map-merge(
-      map-get($utilities, "display"),
-      (
-        "values": append(map-get(map-get($utilities, "display"), "values"), contents)
-      )
-    )
+    "background-color":
+      map-merge(
+        map-get($utilities, "background-color"),
+        (
+          responsive: true,
+        )
+      ),
+    "position":
+      map-merge(
+        map-get($utilities, "position"),
+        (
+          responsive: true,
+        )
+      ),
+    "translate-middle":
+      map-merge(
+        map-get($utilities, "translate-middle"),
+        (
+          responsive: true,
+        )
+      ),
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+    "display":
+      map-merge(
+        map-get($utilities, "display"),
+        (
+          "values": append(map-get(map-get($utilities, "display"), "values"), contents),
+        )
+      ),
+    "font-weight":
+      map-merge(
+        map-get($utilities, "font-weight"),
+        (
+          "values":
+            map-merge(
+              map-get(map-get($utilities, "font-weight"), "values"),
+              (
+                "350": 350,
+              )
+            ),
+        )
+      ),
   )
 );
